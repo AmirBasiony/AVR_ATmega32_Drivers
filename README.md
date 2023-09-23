@@ -1,4 +1,4 @@
-# AVR-ATmega32-Drivers ![image](https://cdn1-shop.mikroe.com/img/product/atmega32/atmega32-thickbox_default-12x.jpg)
+# AVR-ATmega32-Drivers ![image](https://cdn1-shop.mikroe.com/img/product/atmega32/atmega32-thickbox_default-12x.jpg){ width=300px height=200px }
 
 #### This is a repository for peripheral and Module drivers for AVR Atmega32 
 you can get the datasheet via [link for datasheet](https://pdf1.alldatasheet.com/datasheet-pdf/view/77378/ATMEL/ATMEGA32.html).
