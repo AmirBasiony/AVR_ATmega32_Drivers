@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Timer.c
  *
  * Created: 20/08/2023 03:38:30 AM
@@ -154,11 +154,11 @@ E_STATUS_t TIMER0_SetCompareValue(u8 u8_ticks)
 	return	RetValue;
 }
 
-E_STATUS_t TIMER0_GetCounterValue(u8 *ptr_u8_ticks)
+u8 TIMER0_GetCounterValue(void)
 {
-	E_STATUS_t	RetValue = E_OK;
-	*ptr_u8_ticks = TCNT0;
-	return	RetValue;
+	u8 u8_ticks = TCNT0;
+	
+	return	u8_ticks;
 }
 
 E_STATUS_t TIMER0_SetCounterValue(u8 u8_ticks)
@@ -328,7 +328,8 @@ E_STATUS_t TIMER1_Init(TIMER1_Config_t *TIM1_Config)
 	{	
 		Temp_TCCR1A |= G_TIMER1_Config.PWM1_STATE;
 	}
-    // Copy Temp_TCCR1A value to TCCR1A
+
+    // Copy Temp_TCCR1A value to TCCR1A
     TCCR1A |= Temp_TCCR1A;
     // Copy Temp_TCCR1B value to TCCR1B
     TCCR1B |= Temp_TCCR1B; 
@@ -387,15 +388,13 @@ E_STATUS_t TIMER1_SetCompareValue(u16 u16_ticks,u8 CHANNEL)
 }
 
 // Function to get the current counter value of Timer1
-E_STATUS_t TIMER1_GetCounterValue(u16 *ptr_u16_ticks)
+u16 TIMER1_GetCounterValue()
 {
-	E_STATUS_t	RetValue = E_OK;
-
-	*ptr_u16_ticks = TCNT1;
+	u16 u16_ticks = TCNT1;
 // 	*ptr_u16_ticks = ((u16)TCNT1L);	
 // 	*ptr_u16_ticks =  (((u16)TCNT1H) << 8);
 
-	return	RetValue;	
+	return	u16_ticks;	
 }
 // Function to set the counter value of Timer1
 E_STATUS_t TIMER1_SetCounterValue(u16 u16_ticks)
