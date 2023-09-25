@@ -1,4 +1,4 @@
-﻿
+
 #ifndef TIMER_H_
 #define TIMER_H_
 
@@ -230,7 +230,7 @@ E_STATUS_t TIMER0_Stop(void);
 // Function to set the compare value of Timer0
 E_STATUS_t TIMER0_SetCompareValue(u8 u8_ticks);
 // Function to get the current counter value of Timer0
-E_STATUS_t TIMER0_GetCounterValue(u8 *ptr_u8_ticks);
+u8 TIMER0_GetCounterValue(void);
 // Function to set the counter value of Timer0
 E_STATUS_t TIMER0_SetCounterValue(u8 u8_ticks);
 // Function to get the overflow counter value of Timer0
@@ -259,7 +259,7 @@ E_STATUS_t TIMER1_Stop(void);
 E_STATUS_t TIMER1_SetICR1Value(u16 u16_ticks);
 E_STATUS_t TIMER1_SetCompareValue(u16 u16_ticks,u8 CHANNEL);
 // Function to get the current counter value of Timer1
-E_STATUS_t TIMER1_GetCounterValue(u16 *ptr_u16_ticks);
+u16 TIMER1_GetCounterValue(void);
 // Function to set the counter value of Timer1
 E_STATUS_t TIMER1_SetCounterValue(u16 u16_ticks);
 // Function to get the overflow counter value of Timer1
